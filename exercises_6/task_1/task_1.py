@@ -19,9 +19,8 @@ def validate_fasta(fasta_path):
                     if not(character in valid_characters):
                         # If an invalid char is found, return false. This also immedeately exits the function, preventing further checking.
                         return False
-        else:
-            # If the file was checked without occurence of invalid chars, return True
-            return True
+        # If the file was checked without occurence of invalid chars, return True
+        return True
     
         # Quicker way: regex to the rescue!
         """
