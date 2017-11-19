@@ -22,6 +22,7 @@ invalid_seq = list("AAAXYZAAA") # Sequence now as a list
 for letter in invalid_seq:
     if not letter in permitted_letters:
         print("Sequence contains invalid letters!")
+        # Stop iteration once we hit an invalid letter, otherwise we will get multiple messages
         break
 else:
     print("Sequence contains only valid characters")
