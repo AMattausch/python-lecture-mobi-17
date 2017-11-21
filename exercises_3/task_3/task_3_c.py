@@ -23,10 +23,10 @@ for seq in seq_list:
 
     hypo_proteins = 0
     frame_shift = 0
-    while frame_shift+2 <= len(seq):
+    while frame_shift+3 < len(seq):
         if seq[frame_shift:frame_shift+3] == 'AUG': # Check wheter the current codon is a start codon
             codon_offset = 3 # Next codon is 3 bases away
-            while frame_shift+codon_offset <= len(seq): # Iterate in 3-base-steps over the rest of the sequence
+            while frame_shift+3+codon_offset < len(seq): # Iterate in 3-base-steps over the rest of the sequence
                 if seq[frame_shift+codon_offset:frame_shift+codon_offset+3] in stop_codons: # Check whether the current codon in the list of stop codons
                     hypo_proteins += 1
                     break # Stop checking for further stop codons
