@@ -5,4 +5,4 @@ import cpgplotting as cgp
 cpg_file_path = sys.argv[1]
 cpg_plot_path = sys.argv[2]
 
-cgp.plotMethHistogram(cpg_file_path, cpg_plot_path)
+cgp.pandasPlotMethHistogram(cpg_file_path, cpg_plot_path)
