@@ -10,7 +10,7 @@ seq_list = [dna_seq, rna_seq]
 i = 0
 while i < len(seq_list):
     seq = seq_list[i].upper()
-    i += 1 # One could also increment this at the en of each iteration, 
+    i += 1 # One could also increment this at the end of each iteration, 
     # however we might not even reach said end because of the break/continue statements, therefore it's best to increment right after using i
     print("Validating sequence:", seq)
     j = 0
