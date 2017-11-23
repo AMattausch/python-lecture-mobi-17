@@ -14,7 +14,7 @@ def plotMeanMethBoxPlot(cpg_file_path):
     with open(cpg_file_path) as cpg_file:
         # Get the third column of each line as long as its not a header (starting with '#'), cast it as float
         mean_meth_list = [float(line.rstrip('\n').split('\t')[4]) for line in cpg_file if not line[0] == '#'] 
-        plt.boxplot(mean_meth_list)
+        plt.boxplot(mean_meth_list) # Create boxplot
         plt.ylabel("methylation value") # Set the labels
         plt.title("Promotor mean Methylation")        
 
